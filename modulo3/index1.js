@@ -150,3 +150,19 @@ console.log("Alice" || "Bob"); // -> Alice
 console.log("" || "Bob"); // -> Bob
 //! Operadores lógicos y valores no booleanos - continuación
 
+
+let x = 0;
+let y = 0;
+console.log(x++ && y++); // -> 0
+console.log(x); // -> 1
+console.log(y); // -> y == 0
+
+
+//!Operadores de Asignación Compuesta logicos
+let a = true;
+console.log(a); // -> true
+a &&= false;
+// a = a && false
+console.log(a); // -> false
+
+

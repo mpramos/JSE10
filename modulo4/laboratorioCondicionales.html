@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Escenario
+        // Durante la última modificación del programa con la lista de contactos, 
+        // permitimos que el usuario agregara un nuevo contacto con los datos ingresados 
+        // por el usuario mientras se ejecuta el programa. Vayamos un paso más allá:
+        //  intenta modificar el programa para que el usuario pueda elegir lo que quiere hacer
+        //   con la lista. Las opciones serán:
+
+        // Mostrar el último contacto (último)
+        // Añadir un nuevo contacto (nuevo)
+        // Al agregar un nuevo contacto, verifica si el usuario ha ingresado todos los datos 
+        // necesarios. Si falta al menos uno de los tres valores (nombre, teléfono o correo electrónico),
+        //  no se agrega el contacto.
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "Curabitur@nonummyac.co.uk"
+        }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuere@sed.com"
+        }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@convallis.edu"
+        }];
+        // Mostrar el primer contacto (primero)
+        let opcion = prompt(` Que quieres hacer ?:
+        Introduzca el numero 1 para mostrar el primer contacto
+        Introduzca el numero 2 para mostrar el ultimo contacto
+        Introduzca el numero 3 para añadir un nuevo contacto
+        `)
+        switch (opcion) {
+            case '1':
+                alert(`${contacts[0].name}/${contacts[0].phone}/${contacts[0].email}`)                
+                break;
+            case '2':
+                alert(`${contacts[contacts.length-1].name}/${contacts[contacts.length-1].phone}/${contacts[contacts.length-1].email}`)                
+                break;
+                case '3':
+                    let nombre= prompt('Introduce el nombre')
+                    let telefono= prompt('Introduce el telefono')
+                    let email= prompt('Introduce el email')
+                    if (nombre && telefono && email) {
+                    contacts.push({
+                        name: nombre,
+                        phone: telefono,
+                        email: email
+                    })
+                    alert(`${contacts[contacts.length-1].name}/${contacts[contacts.length-1].phone}/${contacts[contacts.length-1].email}`)                
+                } else {
+                    alert('Faltan parametros')
+                }
+                break;
+                
+        
+            default:
+                alert('Datos no válidos')
+                break;
+        }
+
+
+
+        </script>
+</body>
+
+</html>

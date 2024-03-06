@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userAge = 23;
+        let isFemale = false;
+        let points = 703;
+        let cartValue = 299;
+        let shippingCost = 9.99;
+
+        if (userAge >= 18) {
+            if (cartValue >= 300 || points >= 500) {
+                shippingCost = 0;
+            }
+        }
+
+        console.log(shippingCost);
+
+    </script>
+</body>
+
+</html>

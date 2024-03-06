@@ -12,3 +12,4 @@ console.log(height); // -> 180
 console.log(weight); // -> 70
     
 
+console.log(window);
