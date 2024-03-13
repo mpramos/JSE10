@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "Curabitur@nonummyac.co.uk"
+        }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuere@sed.com"
+        }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@convallis.edu"
+        }];
+
+        let isOver=false
+        
+        while (!isOver) {
+            let opcion = prompt(` Que quieres hacer ?:
+            Introduzca el numero 1 para mostrar el primer contacto
+            Introduzca el numero 2 para mostrar el ultimo contacto
+            Introduzca el numero 3 para añadir un nuevo contacto
+            Introduzca el numero 4 para ver todos los contactos
+            Introduzca el numero 5 si quiere salir
+            
+            `)
+            
+            switch (opcion) {
+                case '1':
+                    alert(`${contacts[0].name}/${contacts[0].phone}/${contacts[0].email}`)     
+                    isOver= !confirm('Quieres seguir en la aplicacion')  
+                    break;
+               case '2':
+                    alert(`${contacts[contacts.length-1].name}/${contacts[contacts.length-1].phone}/${contacts[contacts.length-1].email}`)                
+                    isOver= !confirm('Quieres seguir en la aplicacion')  
+                    break;
+                    case '3':
+                        let nombre= prompt('Introduce el nombre')
+                        let telefono= prompt('Introduce el telefono')
+                        let email= prompt('Introduce el email')
+                        if (nombre && telefono && email) {
+                            contacts.push({
+                                name: nombre,
+                                phone: telefono,
+                                email: email
+                            })
+                            alert(`${contacts[contacts.length-1].name}/${contacts[contacts.length-1].phone}/${contacts[contacts.length-1].email}`)                
+                        } else {
+                            alert('Faltan parametros')
+                        }
+                        isOver= !confirm('Quieres seguir en la aplicacion')  
+                        break;
+                    case '4':
+                            for (const contacto of contacts) {
+                                alert(`${contacto.name}/${contacto.email}/${contacto.phone}`)
+                            }
+                            isOver= !confirm('Quieres seguir en la aplicacion')  
+                    break;
+                case '5':
+                    isOver=true
+                    break;
+                default:
+                    alert('Datos no válidos')
+                    break;
+            }
+
+        }    
+
+
+
+        </script>
+</body>
+
+</html>

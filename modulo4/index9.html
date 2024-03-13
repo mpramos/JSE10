@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let isOver = false;
+        let counter = 1;
+
+        // while (isOver != true) {
+        //     let continueLoop = confirm(`[${counter}] ¿Continuar en el bucle?`); //true false
+        //     isOver = continueLoop === true ? false : true;
+        //     counter = counter + 1;
+        // }
+        while (!isOver) {
+            isOver = !confirm(`[${counter++}] ¿Continuar en el bucle?`);
+        }
+
+
+    </script>
+</body>
+
+</html>
