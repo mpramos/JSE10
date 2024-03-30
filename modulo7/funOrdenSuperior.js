@@ -171,9 +171,32 @@ console.log(scoresGreaterEighty);
     const nombres = ['carlos',1,3,34,34]
     const areSomeStr = nombres.some(nombre=> typeof nombre === 'string')
     console.log(areSomeStr);
-    
-    
-    
+
+    //! sort
+    const products = ['leche','cafe','azucar','miel','manzana']
+    console.log(products.sort());
+
+    const $numbers = [9.81,3.14,100,37]
+
+    console.log($numbers.sort((a,b)=> a-b))
+    console.log($numbers.sort((a,b)=> b-a))
+
+
+    const users = [
+        {name:'Juana', age:90},
+        {name:'Maria', age:50},
+        {name:'Elias', age:90},
+        {name:'Jose', age:70},
+    ]
+    users.sort((a,b)=>{
+        if (a.age < b.age) 
+            return -1
+        
+        if (a.age > b.age) 
+            return 1
+        return 0
+    })
+    console.log(users);
     
     
     
