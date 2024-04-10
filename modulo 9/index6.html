@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>lista ✍</li>
+        <li>lista ✍</li>
+        <li>lista ✍</li>
+        <li>lista ✍</li>
+        <li>lista ✍</li>
+    </ul>
+    <script>
+        let title = document.createElement('h1')
+        title.className = 'title'
+        title.style.fontSize = '24px'
+        title.textContent = 'Creando elementos Con JavaScript'
+        console.log(title);
+        document.body.appendChild(title)
+        let _title 
+        for (let i = 0; i < 3; i++) {
+            _title = document.createElement('h1')
+            _title.className = 'title'
+            _title.style.fontSize = '24px'
+            _title.textContent = 'Creando elementos Con JavaScript for'
+            console.log(_title);
+            document.body.appendChild(_title)
+         }
+         let ul = document.querySelector('ul')
+        //  const lists = document.querySelectorAll('li')
+        //  for (const list of lists) {
+        //     ul.removeChild(list)
+        //  }
+        ul.innerHTML = ''
+    </script>
+</body>
+</html>

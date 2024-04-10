@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button>
+    <button onclick="clickMe()">Hazme de nuevo un click</button>
+    <script>
+        // const button = document.querySelector('button')
+        // button.addEventListener('click',e=>{
+        //     console.log('objecto del evento ', e)
+        //     console.log('elemento que se dá', e.target)
+        //     console.log('texto del elemento seleccionado', e.target.textContent)
+        // })
+        // let clickMe=() =>{
+            //     alert('Hiciste click en el segundo boton')
+            // }
+        //     const button = document.querySelector('button')
+        //     button.addEventListener('dblclick', e=>{
+        //         console.log('objecto del evento ', e)
+        //         console.log('elemento que se dá', e.target)
+        //         console.log('texto del elemento seleccionado', e.target.textContent)
+
+        // })
+            const button = document.querySelector('button')
+            button.addEventListener('mouseenter', e=>{
+                console.log('objecto del evento ', e)
+                console.log('elemento que se dá', e.target)
+                console.log('texto del elemento seleccionado', e.target.textContent)
+
+        })
+    </script>
+</body>
+</html>
